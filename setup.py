@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 
+with open('requirements.txt') as f:
+    required = f.read().splitlines()
+
 setup(name='hacky',
 
       version='0.1',
@@ -25,5 +28,7 @@ setup(name='hacky',
           'Topic :: Software Development :: Libraries',
           'Programming Language :: Python :: 2.7',
       ],
+
+      install_requires=required,
 
       setup_requires=[])
