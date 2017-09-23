@@ -4,7 +4,8 @@
 import requests
 
 """
-Defining this function as of now. Will come back to this later. Need to have a generic function for all the scrape related actions
+Defining this function as of now. Will come back to this later.
+Need to have a generic function for all the scrape related actions.
 """
 
 
@@ -28,7 +29,7 @@ def request(url, **kwargs):
         try:
             method = kwargs['method']
         except KeyError:
-            print 'Please mention the method: get, post, put'
+            print('Please mention the method: get, post, put')
             return
 
         try:
