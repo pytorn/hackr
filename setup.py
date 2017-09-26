@@ -19,7 +19,7 @@ setup(name='hacky',
 
       packages=find_packages(exclude=['tests']),
 
-      long_description=open('README.md').read(),
+      long_description=open('README.rst').read(),
 
       zip_safe=False,
 
