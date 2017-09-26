@@ -3,11 +3,11 @@ from setuptools import setup, find_packages
 with open('requirements.txt') as f:
     required = f.read().splitlines()
 
-setup(name='hacky',
+setup(name='hackr',
 
-      version='0.1',
+      version='0.1.1',
 
-      url='https://github.com/pytorn/hacky',
+      url='https://github.com/pytorn/hackr',
 
       license='Apache 2.0',
 

@@ -1,4 +1,4 @@
-hacky: Unicorn library for Hackathons
+hackr: Unicorn library for Hackathons
 =====================================
 
 An All-in-one library, safe for hackathon consumption.
@@ -8,7 +8,7 @@ You can perform each and every task using a single library.
 Features
 --------
 
-hacky currently supports the following features:
+hackr currently supports the following features:
 
 - Generate random names
 - Generate random address
@@ -20,7 +20,7 @@ hacky currently supports the following features:
 - Parse data in JSON
 - Send Emails
 
-hacky officially supports Python 2.7 currently.
+hackr officially supports Python 2.7 currently.
 
 Usage
 -----
@@ -28,36 +28,36 @@ Usage
 Generate Random names
 
 
-    >>> import hacky
-    >>> a = hacky.generator.names(5)
+    >>> import hackr
+    >>> a = hackr.generator.names(5)
     >>> print a
     [u'Mr. Thomas Wolf MD', u'Valerie Turner', u'Maria Knight', u'Raymond Shelton', u'Erica Glenn']
 
 Generate Random dates
 
-    >>> import hacky
-    >>> a= hacky.generator.dates(5,1995,2017)
+    >>> import hackr
+    >>> a= hackr.generator.dates(5,1995,2017)
     >>> print a
     ['1998-08-17 00:00:00', '2007-03-25 00:00:00', '2003-01-27 00:00:00', '2014-10-13 00:00:00', '1995-02-10 00:00:00']
-    
+
 Scrape a webpage
 
-    >>> import hacky
-    >>> a= hacky.web.scrape("https://api.github.com/users/ashwini0529")
+    >>> import hackr
+    >>> a= hackr.web.scrape("https://api.github.com/users/ashwini0529")
 
 Make Web Requests
 
-    >>> import hacky
+    >>> import hackr
     >>> #If you want the response as a string
-    >>> a= hacky.web.request("http://httpbin.org/post", method="post", params={'a':'b'})
+    >>> a= hackr.web.request("http://httpbin.org/post", method="post", params={'a':'b'})
     >>> If you want the response as JSON
-    >>> a= hacky.web.request("http://httpbin.org/post", method="post", params={'a':'b'}, type="JSON")
-    
+    >>> a= hackr.web.request("http://httpbin.org/post", method="post", params={'a':'b'}, type="JSON")
+
 Send Emails
 
-    >>> import hacky
+    >>> import hackr
     >>> #Enter your GMAIL email address and password in the parameters email, and password.
-    >>> hacky.actions.email("Hey there", email="foo@bar.com", password="foobar", to="bar@foo.com", subject="Foo Bar")
+    >>> hackr.actions.email("Hey there", email="foo@bar.com", password="foobar", to="bar@foo.com", subject="Foo Bar")
 
     
 Contribution Guidelines

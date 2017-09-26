@@ -6,7 +6,7 @@ import smtplib
 '''
 
 A function to send emails using SMTP (GMAIL)
-Sample usage: hacky.actions.email("Hey there",
+Sample usage: hackr.actions.email("Hey there",
 email="foo@bar.com", password="foobar", to="bar@foo.com", subject="Foo Bar")
 
 '''
