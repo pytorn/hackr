@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import
 
-import generator
-import web
-import actions
+from . import generator
+from . import web
+from . import actions

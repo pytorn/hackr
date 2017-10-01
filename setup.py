@@ -27,6 +27,7 @@ setup(name='hackr',
           'Intended Audience :: Developers',
           'Topic :: Software Development :: Libraries',
           'Programming Language :: Python :: 2.7',
+          'Programming Language :: Python :: 3.6',
       ],
 
       install_requires=required,
