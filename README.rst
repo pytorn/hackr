@@ -40,6 +40,15 @@ Generate Random dates
     >>> print a
     ['1998-08-17 00:00:00', '2007-03-25 00:00:00', '2003-01-27 00:00:00', '2014-10-13 00:00:00', '1995-02-10 00:00:00']
 
+Generate Random json data
+
+    >>> import hackr
+    >>> a = hackr.object_generator.generate_json(4, name='names', address='address')
+    >>> print a
+    '[{"name": "Jeffery Russell", "address": "USNV Bradley\\nFPO AA 49483-3369"}, {"name": "Caitlin Wong", "address": "4622 Richard Summit Apt. 325\\nHollow
+    aystad, OH 88464"}, {"name": "Adrian Pugh", "address": "977 Hill Meadows Suite 944\\nVictoriaton, PR 58653-2191"}, {"name": "Christopher Schaefer", "add
+    ress": "62215 Charles Cape Apt. 039\\nHaleymouth, ND 82518-8938"}]'
+
 Scrape a webpage
 
     >>> import hackr
