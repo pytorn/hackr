@@ -26,15 +26,22 @@ def characters(count):
 
 def dates(count, start_year, end_year):
     dataset = []
+    leap_year = False
     for i in range(count):
         year = random.randint(start_year, end_year)
+        if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+            leap_year = True
         month = random.randint(1, 12)
-        if month != 2:
+        if month == 2 and leap_year == True:
+            day = random.randint(1, 29)
+        elif month == 2 and leap_year == False:
+            day = random.randint(1, 28)
+        elif month == 9 or month == 4 or month == 6 or month == 11:
             day = random.randint(1, 30)
         else:
-            day = random.randint(1, 28)
+            day = random.randint(1, 31)
         dataset.append(str(datetime(year, month, day)))
-    return dataset  # Currently it doesn't include 31st and 29th Feb
+    return dataset
 
 
 def names(count):
