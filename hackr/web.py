@@ -9,9 +9,10 @@ Need to have a generic function for all the scrape related actions.
 """
 
 
-def scrape(url):  # type can be JSON as of now
+def scrape(url, **kwargs):  # type can be JSON as of now
     scraped_webpage = requests.get(url)
-    if type != "JSON":
+    return_type = kwargs['type'].lower()
+    if return_type != "json":
         return scraped_webpage.text
     try:
         return scraped_webpage.json()
