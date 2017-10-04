@@ -15,6 +15,7 @@ hackr currently supports the following features:
 - Generate random dates
 - Generate random digits
 - Generate random characters
+- Generate QRCode
 - Scrape any webpage
 - Send web requests (GET, POST, PUT)
 - Parse data in JSON
@@ -48,6 +49,14 @@ Generate Random json data
     '[{"name": "Jeffery Russell", "address": "USNV Bradley\\nFPO AA 49483-3369"}, {"name": "Caitlin Wong", "address": "4622 Richard Summit Apt. 325\\nHollow
     aystad, OH 88464"}, {"name": "Adrian Pugh", "address": "977 Hill Meadows Suite 944\\nVictoriaton, PR 58653-2191"}, {"name": "Christopher Schaefer", "add
     ress": "62215 Charles Cape Apt. 039\\nHaleymouth, ND 82518-8938"}]'
+
+Generate QRCode
+
+    >>> import hackr
+    >>> # default save to current path
+    >>> img = hackr.image.qrcode("https://github.com/pytorn/hackr")
+    >>> # or manually assign dest path
+    >>> img = hackr.image.qrcode("https://github.com/pytorn/hackr", dest_path="/tmp/hackr_qrcode.png")
 
 Scrape a webpage
 
