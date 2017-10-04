@@ -1,39 +1,26 @@
 import base64
-import tempfile
-import os
+import json
+import time
 
-def b64_encode(source_filepath, dest_filepath=None):
-	""" base64_encode source file to destination
-
-	If dest_filepath not provided, will save to a temp file and returns path """
+def b64_encode(source_filepath):
 	with open(source_filepath, 'rb') as f:
 		data = f.read()
+	dest = open('ImageData/encodeData.json','r')
+	flag = json.loads(dest.read())
+	key = (str(int(time.time()))).decode('utf-8')
+	d = {"data":base64.encodestring(data).decode('utf-8'),"ext":source_filepath[source_filepath.index('.'):]}
+	flag[key] = d
+	dest.close()
+	dest = open('ImageData/encodeData.json','w')
+	json.dump(flag,dest)
+	return key
 
-	if dest_filepath is None:
-		fd, filepath = tempfile.mkstemp()
-		f = os.fdopen(fd, 'wb')
-		f.write(base64.b64encode(data))
-		f.close()
-		return filepath
+def b64_decode(key,dest_path):
+        source = open('ImageData/encodeData.json','r')
+        flag = json.loads(source.read())
+        name = key+str(flag[key]["ext"])
+        dest = open(dest_path+name,'wb')
+        dest.write(base64.decodestring((flag[key]["data"]).encode('utf-8')))
+        dest.close()
+        return dest_path+name
 
-	with open(dest_filepath, 'wb') as f:
-		f.write(base64.b64encode(data))
-	return dest_filepath
-
-def b64_decode(source_filepath, dest_filepath=None):
-	""" base64 decode source file to destination
-
-	If dest_filepath not provided, will save to a tmp file and return path """
-	with open(source_filepath, 'rb') as f:
-		data = f.read()
-
-	if dest_filepath is None:
-		fd, filepath = tempfile.mkstemp()
-		f = os.fdopen(fd, 'wb')
-		f.write(base64.b64decode(data))
-		f.close()
-		return filepath
-
-	with open(dest_filepath, 'wb') as f:
-		f.write(base64.b64decode(data))
-	return dest_filepath
