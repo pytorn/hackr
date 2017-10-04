@@ -1,6 +1,11 @@
+# -*- coding: utf-8 -*-
+
+import os
 import base64
 import json
 import time
+import qrcode as qr
+
 
 def b64_encode(source_filepath):
 	with open(source_filepath, 'rb') as f:
@@ -24,3 +29,8 @@ def b64_decode(key,dest_path):
         dest.close()
         return dest_path+name
 
+
+def qrcode(data, dest_path=None):
+    img = qr.make(data)
+    img.save(dest_path or "{}/{}".format(os.getcwd(), "hackr_qrcode.png"))
+    return img
