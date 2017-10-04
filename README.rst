@@ -27,24 +27,38 @@ Usage
 
 Generate Random names
 
+    >>> import hackr
+    >>> hackr.generator.names(5)
+    [u'Mr. Thomas Wolf MD', u'Valerie Turner', u'Maria Knight', u'Raymond Shelton', u'Erica Glenn']
+
+Generate random address
 
     >>> import hackr
-    >>> a = hackr.generator.names(5)
-    >>> print a
-    [u'Mr. Thomas Wolf MD', u'Valerie Turner', u'Maria Knight', u'Raymond Shelton', u'Erica Glenn']
+    >>> hackr.generator.address(2)
+    [u'10046 Samantha Mission\nRodriguezfurt, PW 24665-0184']
 
 Generate Random dates
 
     >>> import hackr
-    >>> a= hackr.generator.dates(5,1995,2017)
-    >>> print a
-    ['1998-08-17 00:00:00', '2007-03-25 00:00:00', '2003-01-27 00:00:00', '2014-10-13 00:00:00', '1995-02-10 00:00:00']
+    >>> hackr.generator.dates(3, 1995, 2017)
+    ['1999-07-03 00:00:00', '2001-04-17 00:00:00', '2016-09-16 00:00:00']
+
+Generate Random digits
+    
+    >>> hackr.generator.digits(3, 5)
+    [0, 1, 2, 3, 2]
+    >>> hackr.generator.digits(1, 10)
+    [0, 1, 1, 1, 0, 1, 1, 1, 0, 0]
+
+Generate random characters
+
+    >>> hackr.generator.characters(10)
+    ['p', 'q', 'M', 'm', 'R', 'b', 'b', 'N', 'a', 'E']
 
 Generate Random json data
 
     >>> import hackr
-    >>> a = hackr.object_generator.generate_json(4, name='names', address='address')
-    >>> print a
+    >>> hackr.object_generator.generate_json(4, name='names', address='address')
     '[{"name": "Jeffery Russell", "address": "USNV Bradley\\nFPO AA 49483-3369"}, {"name": "Caitlin Wong", "address": "4622 Richard Summit Apt. 325\\nHollow
     aystad, OH 88464"}, {"name": "Adrian Pugh", "address": "977 Hill Meadows Suite 944\\nVictoriaton, PR 58653-2191"}, {"name": "Christopher Schaefer", "add
     ress": "62215 Charles Cape Apt. 039\\nHaleymouth, ND 82518-8938"}]'
