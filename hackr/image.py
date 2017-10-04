@@ -8,7 +8,7 @@ def b64_encode(source_filepath):
 	dest = open('ImageData/encodeData.json','r')
 	flag = json.loads(dest.read())
 	key = (str(int(time.time()))).decode('utf-8')
-	d = {"data":base64.encodestring(data).decode('utf-8'),"ext":source_filepath[source_filepath.index('.'):]}
+	d = {"data":base64.b64encode(data).decode('utf-8'),"ext":source_filepath[source_filepath.index('.'):]}
 	flag[key] = d
 	dest.close()
 	dest = open('ImageData/encodeData.json','w')
@@ -20,7 +20,7 @@ def b64_decode(key,dest_path):
         flag = json.loads(source.read())
         name = key+str(flag[key]["ext"])
         dest = open(dest_path+name,'wb')
-        dest.write(base64.decodestring((flag[key]["data"]).encode('utf-8')))
+        dest.write(base64.b64decode((flag[key]["data"]).encode('utf-8')))
         dest.close()
         return dest_path+name
 
