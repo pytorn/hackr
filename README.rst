@@ -3,7 +3,7 @@ hackr: Unicorn library for Hackathons
 
 An All-in-one library, safe for hackathon consumption.
 
-You can perform each and every task using a single library.
+You can perform every task using a single library.
 
 Features
 --------
@@ -88,7 +88,7 @@ Contribution Guidelines
 - Find an issue or create one
 - Create a branch(we prefer to name it patch)
 - Inform everyone that you're working on the issue
-- Send a pull request with proper explaination of what you did
+- Send a pull request with proper explanation of what you did
 - Wait for getting it reviewed.
 - We'd be glad to merge your PR
 
