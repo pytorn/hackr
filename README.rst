@@ -61,7 +61,10 @@ Generate QRCode
 Scrape a webpage
 
     >>> import hackr
-    >>> a= hackr.web.scrape("https://api.github.com/users/ashwini0529")
+    >>>#To get the response as JSON(if the url returns a JSON response, otherwise an exception is returned)
+    >>> json_response = hackr.web.scrape("https://api.github.com/users/ashwini0529", type="json")
+    >>>#To get the response as XML
+    >>> xml_response = hackr.web.scrape("https://api.github.com/users/ashwini0529", type="xml")
 
 Make Web Requests
 
