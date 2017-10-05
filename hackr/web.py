@@ -13,24 +13,24 @@ Need to have a generic function for all the scrape related actions.
 
 
 def scrape(url, **kwargs):  # type can be JSON as of now
-	scraped_webpage = requests.get(url)
-	return_type = kwargs['type'].lower()
-	if return_type == "json":
-		try:
-			return scraped_webpage.json()
-		except ValueError:
-			return 'No JSON object could be decoded'
-	elif return_type == "xml":
-		try:
-			json_data = json.loads(scraped_webpage.content)
-			xml_data = ""
-			for element in bf.etree(json_data):
-				xml_data+=tostring(element)
-			return xml_data
-		except ValueError:
-			return 'No XML could be decoded'
-	else:
-		return scraped_webpage.text
+    scraped_webpage = requests.get(url)
+    return_type = kwargs['type'].lower()
+    if return_type == "json":
+	    try:
+		    return scraped_webpage.json()
+	    except ValueError:
+		    return 'No JSON object could be decoded'
+    elif return_type == "xml":
+	    try:
+		    json_data = json.loads(scraped_webpage.content)
+		    xml_data = ""
+		    for element in bf.etree(json_data):
+			xml_data+=tostring(element)
+		    return xml_data
+	    except ValueError:
+		    return 'No XML could be decoded'
+    else:
+	    return scraped_webpage.text
 
 
 def request(url, **kwargs):
