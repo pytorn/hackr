@@ -5,6 +5,7 @@ import requests
 import json
 from xmljson import badgerfish as bf
 from xml.etree.ElementTree import tostring
+
 """
 Defining this function as of now. Will come back to this later.
 Need to have a generic function for all the scrape related actions.
