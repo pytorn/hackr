@@ -1,5 +1,5 @@
 [Default]
-files = *.py, hacky/*.py
+files = *.py, hackr/*.py
 max_line_length = 80
 use_spaces = True
 
