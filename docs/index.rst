@@ -11,13 +11,3 @@ Welcome to hackr's documentation!
    :hidden:
    
    Welcome <self>
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
-.. include:: ../README.rst
