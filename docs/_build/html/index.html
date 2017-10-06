@@ -1,0 +1,211 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to hackr’s documentation! &#8212; hackr 0.0.2 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-hackr-s-documentation">
+<h1>Welcome to hackr’s documentation!<a class="headerlink" href="#welcome-to-hackr-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+<div class="section" id="hackr-unicorn-library-for-hackathons">
+<h1>hackr: Unicorn library for Hackathons<a class="headerlink" href="#hackr-unicorn-library-for-hackathons" title="Permalink to this headline">¶</a></h1>
+<p>An All-in-one library, safe for hackathon consumption.</p>
+<p>You can perform every task using a single library.</p>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p>hackr currently supports the following features:</p>
+<ul class="simple">
+<li>Generate random names</li>
+<li>Generate random address</li>
+<li>Generate random dates</li>
+<li>Generate random digits</li>
+<li>Generate random characters</li>
+<li>Generate QRCode</li>
+<li>Scrape any webpage</li>
+<li>Send web requests (GET, POST, PUT)</li>
+<li>Parse data in JSON</li>
+<li>Send Emails</li>
+</ul>
+<p>hackr officially supports Python 2.7 currently.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Generate Random names</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">hackr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">hackr</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">a</span>
+<span class="go">[u&#39;Mr. Thomas Wolf MD&#39;, u&#39;Valerie Turner&#39;, u&#39;Maria Knight&#39;, u&#39;Raymond Shelton&#39;, u&#39;Erica Glenn&#39;]</span>
+</pre></div>
+</div>
+<p>Generate Random dates</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">hackr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">=</span> <span class="n">hackr</span><span class="o">.</span><span class="n">generator</span><span class="o">.</span><span class="n">dates</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1995</span><span class="p">,</span><span class="mi">2017</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">a</span>
+<span class="go">[&#39;1998-08-17 00:00:00&#39;, &#39;2007-03-25 00:00:00&#39;, &#39;2003-01-27 00:00:00&#39;, &#39;2014-10-13 00:00:00&#39;, &#39;1995-02-10 00:00:00&#39;]</span>
+</pre></div>
+</div>
+<p>Generate Random json data</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">hackr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">hackr</span><span class="o">.</span><span class="n">object_generator</span><span class="o">.</span><span class="n">generate_json</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;names&#39;</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="s1">&#39;address&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">a</span>
+<span class="go">&#39;[{&quot;name&quot;: &quot;Jeffery Russell&quot;, &quot;address&quot;: &quot;USNV Bradley\\nFPO AA 49483-3369&quot;}, {&quot;name&quot;: &quot;Caitlin Wong&quot;, &quot;address&quot;: &quot;4622 Richard Summit Apt. 325\\nHollow</span>
+<span class="go">aystad, OH 88464&quot;}, {&quot;name&quot;: &quot;Adrian Pugh&quot;, &quot;address&quot;: &quot;977 Hill Meadows Suite 944\\nVictoriaton, PR 58653-2191&quot;}, {&quot;name&quot;: &quot;Christopher Schaefer&quot;, &quot;add</span>
+<span class="go">ress&quot;: &quot;62215 Charles Cape Apt. 039\\nHaleymouth, ND 82518-8938&quot;}]&#39;</span>
+</pre></div>
+</div>
+<p>Generate QRCode</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">hackr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># default save to current path</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">hackr</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">qrcode</span><span class="p">(</span><span class="s2">&quot;https://github.com/pytorn/hackr&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># or manually assign dest path</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">img</span> <span class="o">=</span> <span class="n">hackr</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">qrcode</span><span class="p">(</span><span class="s2">&quot;https://github.com/pytorn/hackr&quot;</span><span class="p">,</span> <span class="n">dest_path</span><span class="o">=</span><span class="s2">&quot;/tmp/hackr_qrcode.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Scrape a webpage</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">hackr</span>
+<span class="go">&gt;&gt;&gt;#To get the response as JSON(if the url returns a JSON response, otherwise an exception is returned)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">json_response</span> <span class="o">=</span> <span class="n">hackr</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">scrape</span><span class="p">(</span><span class="s2">&quot;https://api.github.com/users/ashwini0529&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;json&quot;</span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;#To get the response as XML</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xml_response</span> <span class="o">=</span> <span class="n">hackr</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">scrape</span><span class="p">(</span><span class="s2">&quot;https://api.github.com/users/ashwini0529&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;xml&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Make Web Requests</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">hackr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#If you want the response as a string</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">=</span> <span class="n">hackr</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;http://httpbin.org/post&quot;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="s1">&#39;b&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">If</span> <span class="n">you</span> <span class="n">want</span> <span class="n">the</span> <span class="n">response</span> <span class="k">as</span> <span class="n">JSON</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">=</span> <span class="n">hackr</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;http://httpbin.org/post&quot;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="s1">&#39;b&#39;</span><span class="p">},</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;JSON&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Send Emails</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">hackr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1">#Enter your GMAIL email address and password in the parameters email, and password.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hackr</span><span class="o">.</span><span class="n">actions</span><span class="o">.</span><span class="n">email</span><span class="p">(</span><span class="s2">&quot;Hey there&quot;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s2">&quot;foo@bar.com&quot;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span> <span class="n">to</span><span class="o">=</span><span class="s2">&quot;bar@foo.com&quot;</span><span class="p">,</span> <span class="n">subject</span><span class="o">=</span><span class="s2">&quot;Foo Bar&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="contribution-guidelines">
+<h2>Contribution Guidelines<a class="headerlink" href="#contribution-guidelines" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fork the repository</li>
+<li>Find an issue or create one</li>
+<li>Create a branch(we prefer to name it patch)</li>
+<li>Inform everyone that you’re working on the issue</li>
+<li>Send a pull request with proper explanation of what you did</li>
+<li>Wait for getting it reviewed.</li>
+<li>We’d be glad to merge your PR</li>
+</ul>
+<p>Made with ♥ by: <a class="reference external" href="https://github.com/pytorn">PyTorn</a> | <a class="reference external" href="https://github.com/ashwini0529">Ashwini Purohit</a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">hackr</a></h1>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=pytorn&repo=hackr&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Ashwini Purohit.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/pytorn/hackr" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>
