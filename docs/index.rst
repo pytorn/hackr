@@ -7,9 +7,10 @@ Welcome to hackr's documentation!
 =================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
+   :caption: Home
+   :hidden:
+   
+   Welcome <self>
 
 
 Indices and tables
