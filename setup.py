@@ -5,7 +5,7 @@ with open('requirements.txt') as f:
 
 setup(name='hackr',
 
-      version='0.1.1',
+      version='0.1.2',
 
       url='https://github.com/pytorn/hackr',
 
