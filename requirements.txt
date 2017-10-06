@@ -3,3 +3,4 @@ requests>=2.18.4, <2.19
 qrcode
 pillow
 xmljson
+sphinx_rtd_theme
