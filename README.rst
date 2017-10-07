@@ -92,4 +92,4 @@ Contribution Guidelines
 - Wait for getting it reviewed.
 - We'd be glad to merge your PR
 
-Made with ♥ by: `PyTorn <https://github.com/pytorn>`_ | `Ashwini Purohit <https://github.com/ashwini0529>`_
+Made with ♥ by: `PyTorn <https://github.com/pytorn>`_
