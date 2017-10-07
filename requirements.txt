@@ -4,3 +4,4 @@ qrcode
 pillow
 xmljson
 sphinx_rtd_theme
+matplotlib
