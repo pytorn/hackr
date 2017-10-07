@@ -9,5 +9,7 @@ Welcome to hackr's documentation!
 .. toctree::
    :caption: Home
    :hidden:
-   
+
    Welcome <self>
+
+.. include:: ../README.rst
