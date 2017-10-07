@@ -129,15 +129,12 @@ if __name__ == "__main__":
     line_graph = graph1.create_line_graph(test2)
     bar_graph = graph1.create_bar_graph(D)
     graph1.choose_figure(scatter_graph)
-    graph1.save("/home/xaver/graphs/scatter")
-    #graph1.show()
-    print("Fuck you Xaver")
 
     graph1.choose_figure(line_graph)
-    graph1.save("/home/xaver/graphs/line")
+    graph1.save("/home/user/graphs/line")
     #graph1.show()
 
     graph1.choose_figure(bar_graph)
-    graph1.save("/home/xaver/graphs/bar")
+    graph1.save("/home/user/graphs/bar")
     #graph1.show()
 """
