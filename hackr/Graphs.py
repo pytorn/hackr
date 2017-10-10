@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 # Matplotlib module has been used for plotting
-# Class plo1 has been made to plot given coordinates in different graph styles
+# Class plot1 has been made to plot given coordinates in different graph styles
 #For each graph style a function has been defined
 #For saving the figure a function has been defined , You have to provide the full path
 # For example in Ubuntu , /home/username/filename.png
