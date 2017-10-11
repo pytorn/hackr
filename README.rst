@@ -92,4 +92,6 @@ Contribution Guidelines
 - Wait for getting it reviewed.
 - We'd be glad to merge your PR
 
+Our Awesome `Contributors <https://github.com/pytorn/hackr/graphs/contributors>`_
+
 Made with ♥ by: `PyTorn <https://github.com/pytorn>`_
