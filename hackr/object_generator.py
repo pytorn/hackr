@@ -1,5 +1,5 @@
 import json
-import generator
+from . import generator
 
 
 def generate_json(count, **kwargs):
