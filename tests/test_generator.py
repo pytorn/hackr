@@ -45,7 +45,7 @@ def test_dates():
     assert all(type(x) == str for x in hackr.generator.dates(5, 1, 2000))
     assert all(1 <= int(x.split('-')[0]) <= 2000 for x in hackr.generator.dates(200, 1, 2000))
     assert all(1 <= int(x.split('-')[1]) <= 12 for x in hackr.generator.dates(200, 1, 2000))
-    assert all(1 <= int(x.split('-')[2].split(' ')[0]) <= 31 for x in hackr.generator.dates(020, 1, 2000))
+    assert all(1 <= int(x.split('-')[2].split(' ')[0]) <= 31 for x in hackr.generator.dates(20, 1, 2000))
     with pytest.raises(Exception):
         hackr.generator.dates(1, 0, 200008898989898900)
     with pytest.raises(Exception):
@@ -62,3 +62,15 @@ def test_address():
     assert all(re.search('[1-9]', x) for x in hackr.generator.address(10))
 
 
+def test_ipv4():
+    data = hackr.generator.ipv4(10)
+    data = [[int(subnet) for subnet in ip.split('.')] for ip in data]
+    assert all(len(ip) == 4 for ip in data)
+    assert all([0 <= subnet < 256 for subnet in ip] for ip in data)
+
+
+def test_ipv6():
+    data = hackr.generator.ipv6(10)
+    data = [[int(subnet, 16) for subnet in ip.split(':')] for ip in data]
+    assert all(len(ip) == 8 for ip in data)
+    assert all([0 <= subnet < 65535 for subnet in ip] for ip in data)
