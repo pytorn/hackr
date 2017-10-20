@@ -20,6 +20,7 @@ hackr currently supports the following features:
 - Send web requests (GET, POST, PUT)
 - Parse data in JSON
 - Send Emails
+- Automatically Download Images for Keyword from Google Image Search
 
 hackr officially supports Python 2.7 currently.
 
@@ -80,7 +81,11 @@ Send Emails
     >>> #Enter your GMAIL email address and password in the parameters email, and password.
     >>> hackr.actions.email("Hey there", email="foo@bar.com", password="foobar", to="bar@foo.com", subject="Foo Bar")
 
-    
+Download Images from Google Search
+    >>> import hackr
+    >>> hackr.image_downloader.get_google_images(search_keyword=["foo"], keyword["high resolution"])
+
+
 Contribution Guidelines
 -----------------------
 

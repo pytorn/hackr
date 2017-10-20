@@ -6,4 +6,3 @@ pillow
 xmljson
 sphinx_rtd_theme
 matplotlib==2.0.2
-pytest
