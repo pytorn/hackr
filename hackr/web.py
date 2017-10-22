@@ -12,7 +12,7 @@ Need to have a generic function for all the scrape related actions.
 """
 
 
-def scrape(url, **kwargs):  # type can be JSON as of now
+def scrape(url, **kwargs):
     scraped_webpage = requests.get(url)
     return_type = kwargs['type'].lower()
     if return_type == "json":
