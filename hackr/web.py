@@ -14,47 +14,37 @@ Need to have a generic function for all the scrape related actions.
 """
 
 
+def scrape_images(url):
+    soup = BeautifulSoup(urllib2.urlopen(url).read())
+    folder_name = url.split('/')[2]
+    opener = urllib2.build_opener()
+    urllib2.install_opener(opener)
+    os.makedirs(folder_name + "/images")
+    num = "0"
+    imgs = soup.findAll("img", {"src": True})
+    for img in imgs:
+        num = str(num)
+        img_url = img["src"]
+        img_data = opener.open(img_url)
+        f = open(folder_name + "/images/Image" + num + "." + img_url[-3:], "wb")
+        f.write(img_data.read())
+        num = int(num) + 1
+        f.close()
+
+
 def scrape(url, **kwargs):
     scraped_webpage = requests.get(url)
     return_type = kwargs['type'].lower()
     get_images = kwargs['images']
     if return_type == "json" and get_images:
         try:
-            soup = BeautifulSoup(urllib2.urlopen(url).read())
-            folder_name = url.split('/')[2]
-            opener = urllib2.build_opener()
-            urllib2.install_opener(opener)
-            os.makedirs(folder_name + "/images")
-            num = "0"
-            imgs = soup.findAll("img", {"src": True})
-            for img in imgs:
-                num = str(num)
-                img_url = img["src"]
-                img_data = opener.open(img_url)
-                f = open(folder_name + "/images/Image" + num + "." + img_url[-3:], "wb")
-                f.write(img_data.read())
-                num = int(num) + 1
-                f.close()
+            scrape_images(url)
             return scraped_webpage.json()
         except ValueError:
             return 'No JSON object could be decoded'
     elif return_type == "xml" and get_images:
         try:
-            soup = BeautifulSoup(urllib2.urlopen(url).read())
-            folder_name = url.split('/')[2]
-            opener = urllib2.build_opener()
-            urllib2.install_opener(opener)
-            os.makedirs(folder_name + "/images")
-            num = "0"
-            images = soup.findAll("img", {"src": True})
-            for img in images:
-                num = str(num)
-                img_url = img["src"]
-                img_data = opener.open(img_url)
-                f = open(folder_name + "/images/Image" + num + "." + img_url[-3:], "wb")
-                f.write(img_data.read())
-                num = int(num) + 1
-                f.close()
+            scrape_images(url)
             json_data = json.loads(scraped_webpage.content)
             xml_data = ""
             for element in bf.etree(json_data):
