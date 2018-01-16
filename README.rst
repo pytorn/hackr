@@ -5,6 +5,8 @@ An All-in-one library, safe for hackathon consumption.
 
 You can perform every task using a single library.
 
+.. contents:: **Table of Contents**
+
 Features
 --------
 
@@ -23,11 +25,18 @@ hackr currently supports the following features:
 
 hackr officially supports Python 2.7 currently.
 
+Installation
+------------
+.. code:: shell
+
+    pip install hackr
+
 Usage
 -----
 
 Generate Random names
 
+.. code:: python
 
     >>> import hackr
     >>> a = hackr.generator.names(5)
@@ -36,12 +45,16 @@ Generate Random names
 
 Generate Random dates
 
+.. code:: python
+
     >>> import hackr
     >>> a= hackr.generator.dates(5,1995,2017)
     >>> print a
     ['1998-08-17 00:00:00', '2007-03-25 00:00:00', '2003-01-27 00:00:00', '2014-10-13 00:00:00', '1995-02-10 00:00:00']
 
 Generate Random json data
+
+.. code:: python
 
     >>> import hackr
     >>> a = hackr.object_generator.generate_json(4, name='names', address='address')
@@ -52,6 +65,8 @@ Generate Random json data
 
 Generate QRCode
 
+.. code:: python
+
     >>> import hackr
     >>> # default save to current path
     >>> img = hackr.image.qrcode("https://github.com/pytorn/hackr")
@@ -59,6 +74,8 @@ Generate QRCode
     >>> img = hackr.image.qrcode("https://github.com/pytorn/hackr", dest_path="/tmp/hackr_qrcode.png")
 
 Scrape a webpage
+
+.. code:: python
 
     >>> import hackr
     >>>#To get the response as JSON(if the url returns a JSON response, otherwise an exception is returned)
@@ -68,6 +85,8 @@ Scrape a webpage
 
 Make Web Requests
 
+.. code:: python
+
     >>> import hackr
     >>> #If you want the response as a string
     >>> a= hackr.web.request("http://httpbin.org/post", method="post", params={'a':'b'})
@@ -75,6 +94,8 @@ Make Web Requests
     >>> a= hackr.web.request("http://httpbin.org/post", method="post", params={'a':'b'}, type="JSON")
 
 Send Emails
+
+.. code:: python
 
     >>> import hackr
     >>> #Enter your GMAIL email address and password in the parameters email, and password.
