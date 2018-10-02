@@ -101,7 +101,17 @@ Send Emails
     >>> #Enter your GMAIL email address and password in the parameters email, and password.
     >>> hackr.actions.email("Hey there", email="foo@bar.com", password="foobar", to="bar@foo.com", subject="Foo Bar")
 
+IP Tools
+
+.. code:: python
+
+    >>> import hackr
+    >>> hackr.iptools.getLiveIP()
+    '***.***.***.***'
+    >>> hackr.iptools.getPrivateIP()
+    '192.168.1.8'
     
+
 Contribution Guidelines
 -----------------------
 
