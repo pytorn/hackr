@@ -14,8 +14,9 @@ def getPrivateIP():
 	try:
 		s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 		s.connect(('8.8.8.8', 80))
-		return s.getsockname()[0]
+		priv_ip = s.getsockname()[0]
 		s.close()
+		return priv_ip
 	except Exception as _:
 		print 'Could not get local IP Address'
 
