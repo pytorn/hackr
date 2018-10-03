@@ -7,3 +7,4 @@ from . import object_generator
 from . import web
 from . import actions
 from . import image
+from . import iptools

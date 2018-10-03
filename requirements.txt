@@ -6,3 +6,5 @@ pillow
 xmljson
 sphinx_rtd_theme
 matplotlib==2.0.2
+BeautifulSoup4==4.6.3
+lxml==4.2.5
