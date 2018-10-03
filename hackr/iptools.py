@@ -17,6 +17,7 @@ def getPrivateIP():
 		priv_ip = s.getsockname()[0]
 		s.close()
 		return priv_ip
+
 	except Exception as _:
 		print 'Could not get local IP Address'
 
