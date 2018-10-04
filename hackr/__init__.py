@@ -8,3 +8,4 @@ from . import web
 from . import actions
 from . import image
 from . import iptools
+from . import crypto
