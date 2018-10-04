@@ -118,7 +118,7 @@ Cryptography
     >>> import hackr
     >>> e = hackr.crypto.Encrypt('hackr')
     >>> e.sha1()
-    0cbb7cc60b77fe81355c3b116837a5e50b747311
+    '0cbb7cc60b77fe81355c3b116837a5e50b747311'
     >>> d = hackr.crypto.Decrypt('0cbb7cc60b77fe81355c3b116837a5e50b747311','dict.txt')
     >>> d.sha1()
     hackr
