@@ -110,6 +110,19 @@ IP Tools
     '***.***.***.***'
     >>> hackr.iptools.getPrivateIP()
     '192.168.1.8'
+
+Cryptography
+
+.. code:: python
+
+    >>> import hackr
+    >>> e = hackr.crypto.Encrypt('hackr')
+    >>> e.sha1()
+    '0cbb7cc60b77fe81355c3b116837a5e50b747311'
+    >>> d = hackr.crypto.Decrypt('0cbb7cc60b77fe81355c3b116837a5e50b747311','dict.txt')
+    >>> d.sha1()
+    hackr
+
     
 
 Contribution Guidelines
