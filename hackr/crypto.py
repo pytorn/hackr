@@ -2,7 +2,7 @@ import hashlib
 import os
 import bcrypt
 import whirlpool
-
+import requests
 
 class Encrypt:
 
@@ -78,3 +78,39 @@ class Decrypt:
                     return plain_text
             return "Can not found this encrypted hash"
         return "Wordlist not accessible"
+
+
+class Currency:
+
+    def __init__(self, value, coin = None):
+        self.value = value
+        self.coin = coin
+
+    def convert(self, from_coin, to_coin):
+        params = {'fsym' : from_coin.upper(), 'tsyms' : to_coin.upper()}
+        response = requests.get('https://min-api.cryptocompare.com/data/price', params = params)
+
+        if 'Message' in response.json().keys():
+            return response.json()['Message']
+        return response.json()[to_coin.upper()] * self.value
+
+    def to(self, to_coin):
+        if self.coin is not None:
+            return self.convert(self.coin, to_coin)
+        return 'Currency not defined'
+
+    @property
+    def value(self):
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        self._value = value
+
+    @property
+    def coin(self):
+        return self._coin
+
+    @coin.setter
+    def coin(self, coin):
+        self._coin = coin
