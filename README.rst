@@ -123,7 +123,15 @@ Cryptography
     >>> d.sha1()
     hackr
 
-    
+
+
+Cryptocurrencies
+
+.. code:: python
+
+        >>> import hackr
+        >>> hackr.converter.cryptoPricePair('USD','BTC')
+        0.0001785
 
 Contribution Guidelines
 -----------------------
