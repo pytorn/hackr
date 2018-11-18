@@ -82,6 +82,8 @@ Scrape a webpage
     >>> json_response = hackr.web.scrape("https://api.github.com/users/ashwini0529", type="json")
     >>>#To get the response as XML
     >>> xml_response = hackr.web.scrape("https://api.github.com/users/ashwini0529", type="xml")
+    >>> #To scrape all images of a webpage(although the function will have limitations in case of dynamically generated content)
+    >>> scrape("https://github.com/", type="json", images=True) # All the images from the webpage will be saved in a folder named images inside a folder named as the URL.
 
 Make Web Requests
 
@@ -124,14 +126,15 @@ Cryptography
     hackr
 
 
-
+ 
 Cryptocurrencies
 
 .. code:: python
 
-        >>> import hackr
-        >>> hackr.converter.cryptoPricePair('USD','BTC')
-        0.0001785
+Converter
+  import hackr
+  hackr.converter.cryptoPricePair('USD','BTC')
+  0.0001785
 
 Contribution Guidelines
 -----------------------
