@@ -1,8 +1,10 @@
 import hashlib
 import os
+
 import bcrypt
-import whirlpool
 import requests
+import whirlpool
+
 
 class Encrypt:
 
@@ -10,19 +12,19 @@ class Encrypt:
         self.plain_text = plain_text
 
     def sha1(self):
-        encrypted = hashlib.sha1(self.plain_text).hexdigest()
+        encrypted = hashlib.sha1(self.plain_text.encode('utf-8')).hexdigest()
         return encrypted
 
     def md5(self):
-        encrypted = hashlib.md5(self.plain_text).hexdigest()
+        encrypted = hashlib.md5(self.plain_text.encode('utf-8')).hexdigest()
         return encrypted
 
     def bcrypt(self):
-        encrypted = bcrypt.hashpw(self.plain_text, bcrypt.gensalt())
+        encrypted = bcrypt.hashpw(self.plain_text.encode('utf-8'), bcrypt.gensalt())
         return encrypted
 
     def whirlpool(self):
-        encrypted = whirlpool.new(self.plain_text).hexdigest()
+        encrypted = whirlpool.new(self.plain_text.encode('utf-8')).hexdigest()
         return encrypted
 
 
@@ -37,7 +39,7 @@ class Decrypt:
             f = open(self.wordlist, "r")
             for i in f:
                 plain_text = i.rstrip('\n')
-                encrypted = hashlib.sha1(plain_text).hexdigest()
+                encrypted = hashlib.sha1(plain_text.encode('utf-8')).hexdigest()
 
                 if encrypted == self.hash:
                     return plain_text
@@ -49,7 +51,7 @@ class Decrypt:
             f = open(self.wordlist, "r")
             for i in f:
                 plain_text = i.rstrip('\n')
-                encrypted = hashlib.md5(plain_text).hexdigest()
+                encrypted = hashlib.md5(plain_text.encode('utf-8')).hexdigest()
 
                 if encrypted == self.hash:
                     return plain_text
@@ -62,7 +64,7 @@ class Decrypt:
             f = open(self.wordlist, "r")
             for i in f:
                 plain_text = i.rstrip('\n')
-                if bcrypt.checkpw(plain_text, self.hash):
+                if bcrypt.checkpw(plain_text.encode('utf-8'), self.hash):
                     return plain_text
             return "Can not found this encrypted hash"
         return "Wordlist not accessible"
@@ -72,7 +74,7 @@ class Decrypt:
             f = open(self.wordlist, "r")
             for i in f:
                 plain_text = i.rstrip('\n')
-                encrypted =  whirlpool.new(plain_text).hexdigest()
+                encrypted = whirlpool.new(plain_text.encode('utf-8')).hexdigest()
 
                 if encrypted == self.hash:
                     return plain_text
@@ -82,13 +84,13 @@ class Decrypt:
 
 class Currency:
 
-    def __init__(self, value, coin = None):
+    def __init__(self, value, coin=None):
         self.value = value
         self.coin = coin
 
     def convert(self, from_coin, to_coin):
-        params = {'fsym' : from_coin.upper(), 'tsyms' : to_coin.upper()}
-        response = requests.get('https://min-api.cryptocompare.com/data/price', params = params)
+        params = {'fsym': from_coin.upper(), 'tsyms': to_coin.upper()}
+        response = requests.get('https://min-api.cryptocompare.com/data/price', params=params)
 
         if 'Message' in response.json().keys():
             return response.json()['Message']

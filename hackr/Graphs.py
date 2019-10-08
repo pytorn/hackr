@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+
+
 # Matplotlib module has been used for plotting
 # Class plot1 has been made to plot given coordinates in different graph styles
 # For each graph style a function has been defined
@@ -78,4 +80,7 @@ class plot1():
 
 # Test Case
 # if __name__ == '__main__':
-#     plot1.scatterplot(plot1,[1,2,3],[4,5,6],'g','/home/shubhi/c1.png')
+#     plot1.scatterplot(plot1,[1,2,3],[4,5,6],'g','/home/shubi/c1.png')
+#     plot1.barplot(plot1,[1,2,3],[4,5,6],'g','/home/shubi/c1.png')
+#     plot1.lineplot(plot1,[1,2,3],[4,5,6],'g','+','/home/shubi/c1.png')
+#     plot1.histplot(plot1,[1,2,3],[4,5,6],'g','/home/shubi/c1.png')

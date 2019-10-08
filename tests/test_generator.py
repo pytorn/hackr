@@ -1,6 +1,9 @@
-import pytest
-import hackr
 import re
+
+import pytest
+
+import hackr
+
 
 def test_digits():
     assert len(hackr.generator.digits(3, 0)) == 0

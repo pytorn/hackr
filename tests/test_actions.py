@@ -1,8 +1,5 @@
-from io import StringIO
-from unittest import mock
-
 import smtplib
-import pytest
+from unittest import mock
 
 from hackr.actions import email
 

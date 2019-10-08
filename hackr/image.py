@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import os
 import base64
 import json
+import os
 import time
+
 import qrcode as qr
 
 

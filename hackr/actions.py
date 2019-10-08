@@ -16,7 +16,6 @@ SMTP_URL = "smtp.gmail.com"
 
 
 def email(message, **kwargs):
-
     mail_id = kwargs['email']
     mail_password = kwargs['password']
     to_mail = kwargs['to']
@@ -30,5 +29,6 @@ def email(message, **kwargs):
         server.sendmail(mail_id, to_mail, mail_content)
         server.close()
         return 'Mail Sent Successfully'
+
     except Exception as e:
         print(e)
