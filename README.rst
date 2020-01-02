@@ -125,22 +125,16 @@ Cryptography
     >>> d.sha1()
     hackr
 
+
+ 
 Cryptocurrencies
 
 .. code:: python
 
-    >>> import hackr
-    >>> hackr.crypto.Currency(1).convert('btc','eth')
-    32.16
-    >>> c = hackr.crypto.Currency(1)
-    >>> c.convert('btc','eth')
-    32.16
-    >>> c.coin = 'btc'
-    >>> c.to('eth')
-    32.16
-    >>> c.value = 2
-    >>> c.to('eth')
-    64.32
+Converter
+  import hackr
+  hackr.converter.cryptoPricePair('USD','BTC')
+  0.0001785
 
 Contribution Guidelines
 -----------------------
